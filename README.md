@@ -4,7 +4,6 @@
 
 This assignment is to develop a social networking website where users can share their thoughts, react to their friends thoughs, and create a list of friends using Express, MongoDB and Mongoose ODM.
 
-I had my brother who works in back-end development try to help me with this assignment and the two of us together could not get a functional server. I will try to come back to this but these "assignments" seem unnecessarily difficult for people who are trying to learn, and even some with years of background experience.
 
 ## Video Walkthrough
 

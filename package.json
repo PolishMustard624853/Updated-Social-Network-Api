@@ -1,25 +1,18 @@
 {
   "name": "social-network-api",
+  "description": "This assignment is to develop a social networking website where users can share their thoughts, react to their friends thoughs, and create a list of friends using Express, MongoDB and Mongoose ODM.",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PolishMustard624853/Social-Network-Api.git"
-  },
+  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PolishMustard624853/Social-Network-Api/issues"
-  },
-  "homepage": "https://github.com/PolishMustard624853/Social-Network-Api#readme",
+
   "dependencies": {
     "express": "^4.18.1",
-    "moment": "^2.29.3",
-    "mongoose": "^6.3.4"
+    "mongoose": "^6.3.6"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
