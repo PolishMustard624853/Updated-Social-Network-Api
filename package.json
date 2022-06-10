@@ -3,13 +3,12 @@
   "description": "This assignment is to develop a social networking website where users can share their thoughts, react to their friends thoughs, and create a list of friends using Express, MongoDB and Mongoose ODM.",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
-
   "dependencies": {
     "express": "^4.18.1",
+    "moment": "^2.29.3",
     "mongoose": "^6.3.6"
   },
   "scripts": {

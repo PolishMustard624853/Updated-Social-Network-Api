@@ -16,13 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
 
-db.once('open', () => {
-  app.listen(PORT, () => {
-    console.log(`API server for ${activity} running on port ${PORT}!`);
-  });
-});
+app.listen(PORT, () => console.log(`Connected on localhost:${PORT}`));
 
-// Initially set inside of config/connections.js...
+
+// -------------------------------------------
+
 // const express = require("express");
 // const mongoose = require("mongoose");
 
@@ -47,3 +45,5 @@ db.once('open', () => {
 // mongoose.set("debug", true);
 
 // app.listen(PORT, () => console.log(`Connected on localhost:${PORT}`));
+
+
