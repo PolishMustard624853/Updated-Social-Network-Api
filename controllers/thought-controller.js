@@ -65,6 +65,7 @@ const thoughtController = {
       });
   },
 
+  
   //update thought by id
   updateThought({ params, body }, res) {
     Thought.findOneAndUpdate(
