@@ -1,20 +1,21 @@
 const { Schema, model } = require('mongoose');
 const moment = require('moment');
 
-
 const UserSchema = new Schema({
     username: {
       type: String,
       required: true,
       unique: true,
-      trim: true
+      trim: true,
+      autopopulate: true
     },
     email: {
       type: String,
       required: true,
       unique: true,
       trim: true,
-      match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email address']
+      match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email address'],
+      autopopulate: true
     },
     thoughts: [
         {
@@ -32,7 +33,8 @@ const UserSchema = new Schema({
     { 
     toJSON: {
       virtuals: true,
-      getters: true
+      getters: true,
+      autopopulate: true
     },
     id: false
   }
