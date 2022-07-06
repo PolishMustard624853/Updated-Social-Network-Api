@@ -7,9 +7,16 @@ This assignment is to develop a social networking website where users can share 
 
 ## Video Walkthrough
 
-https://app.vidcast.io/share/cb7837d0-54be-4d3f-896e-0035c9f05633
+https://app.vidcast.io/share/f1adeea4-26fb-4208-8208-e9e1d79e7df3
 
 ## Links to GitHub
+<!-- repository -->
+https://github.com/PolishMustard624853/Updated-Social-Network-Api
 
-https://github.com/PolishMustard624853/Social-Network-Api
-https://polishmustard624853.github.io/Social-Network-Api
+<!-- Deployed Link -->
+https://polishmustard624853.github.io/Updated-Social-Network-Api/
+
+
+## Heroku Link
+
+https://dashboard.heroku.com/apps/cjs-social-network-api
