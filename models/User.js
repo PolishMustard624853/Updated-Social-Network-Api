@@ -1,50 +1,44 @@
+// was students.js
 const { Schema, model } = require('mongoose');
-const moment = require('moment');
+const thoughtSchema = require('./Thought');
 
-const UserSchema = new Schema({
+const userSchema = new Schema(
+  {
     username: {
       type: String,
       required: true,
+      max_length: 50,
       unique: true,
       trim: true,
-      autopopulate: true
     },
     email: {
       type: String,
       required: true,
+      max_length: 50,
       unique: true,
-      trim: true,
-      match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email address'],
-      autopopulate: true
+      match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
     },
-    thoughts: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Thought'
-        }
-      ],
-    friends: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'User'
-        }
-    ]
+    thoughts: {
+      type: Schema.Types.Array, ref: 'thoughtSchema.thoughtId',
     },
-    { 
+    friends: {
+      type: Schema.Types.Array, ref: 'users.id',  
+    }, 
+    },
+    {
     toJSON: {
-      virtuals: true,
       getters: true,
-      autopopulate: true
     },
-    id: false
+    id: false,
   }
 );
 
-const User = model('User', UserSchema);
-
-UserSchema.virtual('friendCount').get(function() {
+userSchema.virtual('friendCount').get(function () {
   return this.friends.length;
+  
 });
 
-// export the User model
+
+const User = model('user', userSchema);
+
 module.exports = User;
